@@ -50,17 +50,15 @@ def Count_points():
                 total_points += (credit * 1)
             elif grade == "F":
                 total_points += (credit * 0)
-            else:
-                pass
+
         total_GPA(total_hour, total_points)
-    else: pass
 
 # define a function that will calculate the GPA
 def total_GPA(total_hour, total_points):
     # display the GPA
     GPA = round((total_points/total_hour), 3)
     label5 = Label(root,font = title_font, text="Your GPA in semester %s is %.3f" % (semester.get(), GPA)).grid(row=11, column=1,columnspan=3)
-
+    return GPA
 #### design of the app
 
 # put a label that ask for information
